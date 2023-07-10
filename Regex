@@ -1,0 +1,23 @@
+Regex for -a: ("^[A-Z]([a-zA-Z]){4,}$") 
+
+Regex for -b: ("^[a-zA-Z]+-[a-zA-Z]+$") 
+
+Regex for -c: ("^([a-zA-Z])[a-zA-Z]*\\1$") 
+
+Regex for -d: ("^[^aeiou].*$") 
+
+ 
+
+QString str; 
+
+QRegularExpression regex("^(\\s){2,}[^_]+|(\\W[^\\n])+|[^ ]+(\\s){2,}$") 
+
+ 
+
+if (regex.match(str).hasMatch()) 
+
+{ 
+
+    str.remove(regex("\\s{2,}(\\W[^\\n]+")) 
+
+} 
